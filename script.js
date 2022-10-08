@@ -18,13 +18,14 @@ function fetchApi(id) {
 
       POKEMON_NAME.innerHTML = `# ${data.id} ${nameCapitalized}`;
       SPRITE.src = data.sprites.front_default;
-      console.log(data.abilities);
 
       const moves = data.moves
         .map((value) => {
           return value.move.name;
         })
         .sort();
+
+      CONTENT.textContent = JSON.stringify(moves);
 
       const numGames = data.game_indices.filter((game) => {
         if (!BANNED_GAMES.includes(game.version.name)) {
