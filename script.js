@@ -56,3 +56,4 @@ function getPokemonName(name) {
 //   console.log(name);
 //   fetchApi(name);
 // }
+/////
